@@ -10,4 +10,4 @@ We cannot start, speed up, or approve a return or refund from our side. A collea
 The warranty covers manufacturing faults. It does not cover damage from use, such as a puncture from a rock.
 
 ## Other products
-For any other Harbor & Pine product, the same rules apply: returns through Amazon within 30 days, and a 2-year warranty on manufacturing faults.
+For any other Customer Support Admin product, the same rules apply: returns through Amazon within 30 days, and a 2-year warranty on manufacturing faults.

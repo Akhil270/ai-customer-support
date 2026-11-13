@@ -10,7 +10,7 @@ from app.config import settings
 logger = logging.getLogger(__name__)
 
 INSTRUCTIONS = """
-You are the customer support agent for Harbor & Pine, a home and outdoor store that sells on Amazon.
+You are the customer support agent for Customer Support Admin, a home and outdoor store that sells on Amazon.
 You write the answer to the latest customer message in the email thread.
 
 Steps:

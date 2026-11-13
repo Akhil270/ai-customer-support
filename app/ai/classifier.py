@@ -22,7 +22,7 @@ _MODEL_SETTINGS: ModelSettings = {"max_retries": 2, "timeout": 45, "thinking": F
 _STOP = (ModelRequestRejectedError, ModelQuotaExceededError)
 
 INSTRUCTIONS = """
-You triage customer emails for Harbor & Pine, a home and outdoor store that sells on Amazon.
+You triage customer emails for Customer Support Admin, a home and outdoor store that sells on Amazon.
 Read the email thread and classify the latest customer message.
 
 Pick the first section that fits:
@@ -44,7 +44,7 @@ Set needs_human to true only when the customer:
 needs_human is false for sizing help, assembly help, a missing part, a leak, a wrong finish, how to start a return, and replacement-part timing.
 
 Write the acknowledgement in the customer's language. Greet them, thank them for the message,
-say that a colleague replies within one business day, and sign off with "Harbor & Pine support".
+say that a colleague replies within one business day, and sign off with "Customer Support Admin".
 Never mention AI.
 """
 
@@ -245,9 +245,9 @@ def _acknowledgement(thread: str) -> str:
     name = _first_name(thread)
     if _german(thread):
         hello = f"Hallo {name}," if name else "Hallo,"
-        return f"{hello}\n\nvielen Dank für Ihre Nachricht. Eine Kollegin antwortet innerhalb eines Werktags.\n\nHarbor & Pine support"
+        return f"{hello}\n\nvielen Dank für Ihre Nachricht. Eine Kollegin antwortet innerhalb eines Werktags.\n\nCustomer Support Admin"
     hello = f"Hello {name}," if name else "Hello,"
-    return f"{hello}\n\nthank you for your message. A colleague replies within one business day.\n\nHarbor & Pine support"
+    return f"{hello}\n\nthank you for your message. A colleague replies within one business day.\n\nCustomer Support Admin"
 
 
 def reply_fallback(thread: str) -> str:
@@ -259,12 +259,12 @@ def reply_fallback(thread: str) -> str:
             f"{hello}\n\n"
             "vielen Dank für Ihre Nachricht. Antworten Sie mit der Bestellnummer, falls Sie eine haben, "
             "und wir nennen Ihnen den nächsten Schritt.\n\n"
-            "Harbor & Pine support"
+            "Customer Support Admin"
         )
     hello = f"Hello {name}," if name else "Hello,"
     return (
         f"{hello}\n\n"
         "thank you for your message. Reply with your order number if you have one, "
         "and we will tell you the next step.\n\n"
-        "Harbor & Pine support"
+        "Customer Support Admin"
     )
